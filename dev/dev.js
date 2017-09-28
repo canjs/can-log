@@ -1,10 +1,10 @@
 'use strict';
 
-var canLog = require("../log/log");
+var canLog = require("../can-log");
 
 /**
- * @module {{}} can-util/js/dev/dev dev
- * @parent can-util/js
+ * @module {{}} can-log/dev dev
+ * @parent can-log
  *
  * Utilities for logging development-mode messages. Use this module for
  * anything that should be shown to the user during development but isn't
@@ -14,15 +14,15 @@ module.exports = {
 	warnTimeout: 5000,
 	logLevel: 0,
 	/**
-	 * @function can-util/js/dev/dev.stringify stringify
-	 * @parent can-util/js/dev/dev
+	 * @function can-log/dev.stringify stringify
+	 * @parent can-log
 	 * @description
 	 *
 	 * JSON stringifies a value, but unlike JSON, will output properties with
 	 * a value of `undefined` (e.g. `{ "prop": undefined }`, not `{}`).
 	 *
 	 * ```
-	 * var dev = require('can-util/js/dev/dev');
+	 * var dev = require('can-log/dev');
 	 * var query = { where: undefined };
 	 * 
 	 * dev.warn('No records found: ' + dev.stringify(query));
@@ -42,14 +42,14 @@ module.exports = {
 			/"\/\* void\(undefined\) \*\/"/g, "undefined");
 	},
 	/**
-	 * @function can-util/js/dev/dev.warn warn
-	 * @parent can-util/js/dev/dev
+	 * @function can-log/dev.warn warn
+	 * @parent can-log
 	 * @description
 	 *
 	 * Adds a warning message to the console.
 	 *
 	 * ```
-	 * var dev = require('can-util/js/dev/dev');
+	 * var dev = require('can-log/dev');
 	 * 
 	 * dev.warn("something evil");
 	 * ```
@@ -63,14 +63,14 @@ module.exports = {
 		//!steal-remove-end
 	},
 	/**
-	 * @function can-util/js/dev/dev.log log
-	 * @parent can-util/js/dev/dev
+	 * @function can-log/dev.log log
+	 * @parent can-log
 	 * @description
 	 *
 	 * Adds a message to the console.
 	 *
 	 * ```
-	 * var dev = require('can-util/js/dev/dev');
+	 * var dev = require('can-log/dev');
 	 * 
 	 * dev.log("hi");
 	 * ```
@@ -84,14 +84,14 @@ module.exports = {
 		//!steal-remove-end
 	},
 	/**
-	 * @function can-util/js/dev/dev.error error
-	 * @parent can-util/js/dev/dev
+	 * @function can-log/dev.error error
+	 * @parent can-log
 	 * @description
 	 *
 	 * Adds an error message to the console.
 	 *
 	 * ```
-	 * var dev = require("can-util/js/dev/dev");
+	 * var dev = require("can-log/dev");
 	 * 
 	 * dev.error(new Error("Oh no!"));
 	 * ```

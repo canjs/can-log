@@ -1,11 +1,11 @@
 'use strict';
 
-var QUnit = require("../../test/qunit");
-var canLog = require("./log");
+var QUnit = require('steal-qunit');
+var canLog = require("./can-log");
 
 if(typeof console !== "undefined") {
 
-	QUnit.module("can-util/js/log");
+	QUnit.module("can-log");
 
 	QUnit.test("log.log works", function(){
 		QUnit.expect(2);

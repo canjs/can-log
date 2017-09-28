@@ -1,10 +1,10 @@
 'use strict';
 
-var QUnit = require('../../test/qunit');
+var QUnit = require('steal-qunit');
 
 var dev = require('./dev');
 
-QUnit.module("can-util/js/dev");
+QUnit.module("can-log/dev");
 
 QUnit.test("stringify", function() {
 	strictEqual(dev.stringify(undefined), "undefined");

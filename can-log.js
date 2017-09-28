@@ -4,21 +4,21 @@ exports.warnTimeout = 5000;
 exports.logLevel = 0;
 
 /**
- * @module {{}} can-util/js/log/log log
- * @parent can-util/js
+ * @module {{}} can-log log
+ * @parent can-log
  * 
  * Utilities for logging to the console.
  */
 
 /**
- * @function can-util/js/log/log.warn warn
- * @parent can-util/js/log/log
+ * @function can-log.warn warn
+ * @parent can-log
  * @description
  * 
  * Adds a warning message to the console.
  *
  * ```
- * var canLog = require("can-util/js/log/log");
+ * var canLog = require("can-log");
  * 
  * canLog.warn("something evil");
  * ```
@@ -41,13 +41,13 @@ exports.warn = function(out) {
 };
 
 /**
- * @function can-util/js/log/log.log log
- * @parent can-util/js/log/log
+ * @function can-log.log log
+ * @parent can-log
  * @description
  * Adds a message to the console.
  *
  * ```
- * var canLog = require("can-util/js/log/log");
+ * var canLog = require("can-log");
  * 
  * canLog.log("hi");
  * ```
@@ -68,13 +68,13 @@ exports.log = function(out) {
 };
 
 /**
- * @function can-util/js/log/log.error error
- * @parent can-util/js/log/log
+ * @function can-log.error error
+ * @parent can-log
  * @description
  * Adds an error message to the console.
  *
  * ```
- * var canLog = require("can-util/js/log/log");
+ * var canLog = require("can-log");
  * 
  * canLog.error(new Error("Oh no!"));
  * ```
