@@ -1,6 +1,6 @@
 {
   "name": "can-log",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Utilities for logging to the console.",
   "homepage": "https://canjs.com/",
   "repository": {
