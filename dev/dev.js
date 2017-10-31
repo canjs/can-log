@@ -5,7 +5,8 @@ var canLog = require("../can-log");
 /**
  * @module {{}} can-log/dev dev
  * @parent can-log
- *
+ * @hide
+ * 
  * Utilities for logging development-mode messages. Use this module for
  * anything that should be shown to the user during development but isn't
  * needed in production. In production these functions become noops.
@@ -17,6 +18,7 @@ module.exports = {
 	 * @function can-log/dev.stringify stringify
 	 * @parent can-log
 	 * @description
+	 * @hide
 	 *
 	 * JSON stringifies a value, but unlike JSON, will output properties with
 	 * a value of `undefined` (e.g. `{ "prop": undefined }`, not `{}`).
@@ -45,6 +47,7 @@ module.exports = {
 	 * @function can-log/dev.warn warn
 	 * @parent can-log
 	 * @description
+	 * @hide
 	 *
 	 * Adds a warning message to the console.
 	 *
@@ -66,6 +69,7 @@ module.exports = {
 	 * @function can-log/dev.log log
 	 * @parent can-log
 	 * @description
+	 * @hide
 	 *
 	 * Adds a message to the console.
 	 *
@@ -87,6 +91,7 @@ module.exports = {
 	 * @function can-log/dev.error error
 	 * @parent can-log
 	 * @description
+	 * @hide
 	 *
 	 * Adds an error message to the console.
 	 *

@@ -5,7 +5,8 @@ exports.logLevel = 0;
 
 /**
  * @module {{}} can-log log
- * @parent can-log
+ * @parent can-infrastructure
+ * @hide
  * 
  * Utilities for logging to the console.
  */
@@ -45,6 +46,7 @@ exports.warn = function(out) {
  * @parent can-log
  * @description
  * Adds a message to the console.
+ * @hide
  *
  * ```
  * var canLog = require("can-log");
@@ -72,6 +74,7 @@ exports.log = function(out) {
  * @parent can-log
  * @description
  * Adds an error message to the console.
+ * @hide
  *
  * ```
  * var canLog = require("can-log");
