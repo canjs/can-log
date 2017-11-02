@@ -5,7 +5,8 @@ exports.logLevel = 0;
 
 /**
  * @module {{}} can-log log
- * @parent can-infrastructure
+ * @parent can-js-utilities
+ * @collection can-infrastructure
  * @hide
  * 
  * Utilities for logging to the console.
