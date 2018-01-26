@@ -8,10 +8,9 @@ if(typeof console !== "undefined") {
 	QUnit.module("can-log");
 
 	QUnit.test("log.log works", function(){
-		QUnit.expect(2);
+		QUnit.expect(1);
 		var log = console.log;
-		console.log = function(type, msg){
-			QUnit.equal(type, "INFO:");
+		console.log = function(msg){
 			QUnit.equal(msg, "it worked");
 			console.log = log;
 		};
@@ -20,10 +19,9 @@ if(typeof console !== "undefined") {
 	});
 
 	QUnit.test("log.warn works", function(){
-		QUnit.expect(2);
+		QUnit.expect(1);
 		var warn = console.warn;
-		console.warn = function(type, msg){
-			QUnit.equal(type, "WARN:");
+		console.warn = function(msg){
 			QUnit.equal(msg, "it worked");
 			console.warn = warn;
 		};
@@ -32,10 +30,9 @@ if(typeof console !== "undefined") {
 	});
 
 	QUnit.test("log.error works", function(){
-		QUnit.expect(2);
+		QUnit.expect(1);
 		var error = console.error;
-		console.error = function(type, msg){
-			QUnit.equal(type, "ERROR:");
+		console.error = function(msg){
 			QUnit.equal(msg, "an error");
 			console.error = error;
 		};
