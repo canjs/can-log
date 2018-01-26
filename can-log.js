@@ -28,7 +28,7 @@ exports.logLevel = 0;
  * @signature `canLog.warn(msg)`
  * @param {String} msg the message to be logged.
  */
-exports.warn = function(out) {
+exports.warn = function() {
 	var ll = this.logLevel;
 	if (ll < 2) {
 		if (typeof console !== "undefined" && console.warn) {
@@ -55,7 +55,7 @@ exports.warn = function(out) {
  * @signature `canLog.log(msg)`
  * @param {String} msg the message
  */
-exports.log = function(out) {
+exports.log = function() {
 	var ll = this.logLevel;
 	if (ll < 1) {
 		if (typeof console !== "undefined" && console.log) {
@@ -80,7 +80,7 @@ exports.log = function(out) {
  * @signature `canLog.error(err)`
  * @param {String|Error} err The error to be logged.
  */
-exports.error = function(out) {
+exports.error = function() {
 	var ll = this.logLevel;
 	if (ll < 1) {
 		if (typeof console !== "undefined" && console.error) {
