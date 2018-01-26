@@ -8,7 +8,7 @@ exports.logLevel = 0;
  * @parent can-js-utilities
  * @collection can-infrastructure
  * @hide
- * 
+ *
  * Utilities for logging to the console.
  */
 
@@ -16,12 +16,12 @@ exports.logLevel = 0;
  * @function can-log.warn warn
  * @parent can-log
  * @description
- * 
+ *
  * Adds a warning message to the console.
  *
  * ```
  * var canLog = require("can-log");
- * 
+ *
  * canLog.warn("something evil");
  * ```
  *
@@ -31,13 +31,10 @@ exports.logLevel = 0;
 exports.warn = function(out) {
 	var ll = this.logLevel;
 	if (ll < 2) {
-		Array.prototype.unshift.call(arguments, 'WARN:');
 		if (typeof console !== "undefined" && console.warn) {
 			this._logger("warn", Array.prototype.slice.call(arguments));
 		} else if (typeof console !== "undefined" && console.log) {
 			this._logger("log", Array.prototype.slice.call(arguments));
-		} else if (window && window.opera && window.opera.postError) {
-			window.opera.postError("CanJS WARNING: " + out);
 		}
 	}
 };
@@ -51,7 +48,7 @@ exports.warn = function(out) {
  *
  * ```
  * var canLog = require("can-log");
- * 
+ *
  * canLog.log("hi");
  * ```
  *
@@ -62,10 +59,7 @@ exports.log = function(out) {
 	var ll = this.logLevel;
 	if (ll < 1) {
 		if (typeof console !== "undefined" && console.log) {
-			Array.prototype.unshift.call(arguments, 'INFO:');
 			this._logger("log", Array.prototype.slice.call(arguments));
-		} else if (window && window.opera && window.opera.postError) {
-			window.opera.postError("CanJS INFO: " + out);
 		}
 	}
 };
@@ -79,7 +73,7 @@ exports.log = function(out) {
  *
  * ```
  * var canLog = require("can-log");
- * 
+ *
  * canLog.error(new Error("Oh no!"));
  * ```
  *
@@ -90,10 +84,7 @@ exports.error = function(out) {
 	var ll = this.logLevel;
 	if (ll < 1) {
 		if (typeof console !== "undefined" && console.error) {
-			Array.prototype.unshift.call(arguments, 'ERROR:');
 			this._logger("error", Array.prototype.slice.call(arguments));
-		} else if (window && window.opera && window.opera.postError) {
-			window.opera.postError("ERROR: " + out);
 		}
 	}
 };
