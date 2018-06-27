@@ -62,7 +62,9 @@ module.exports = {
 	 */
 	warn: function() {
 		//!steal-remove-start
-		canLog.warn.apply(this, arguments);
+		if (process.env.NODE_ENV !== 'production') {
+			canLog.warn.apply(this, arguments);
+		}
 		//!steal-remove-end
 	},
 	/**
@@ -84,7 +86,9 @@ module.exports = {
 	 */
 	log: function() {
 		//!steal-remove-start
-		canLog.log.apply(this, arguments);
+		if (process.env.NODE_ENV !== 'production') {
+			canLog.log.apply(this, arguments);
+		}
 		//!steal-remove-end
 	},
 	/**
@@ -106,7 +110,9 @@ module.exports = {
 	 */
 	error: function() {
 		//!steal-remove-start
-		canLog.error.apply(this, arguments);
+		if (process.env.NODE_ENV !== 'production') {
+			canLog.error.apply(this, arguments);
+		}
 		//!steal-remove-end
 	},
 	_logger: canLog._logger
