@@ -5,8 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-log/blob/master/LICENSE)
 [![npm version](https://badge.fury.io/js/can-log.svg)](https://www.npmjs.com/package/can-log)
 [![Travis build status](https://travis-ci.org/canjs/can-log.svg?branch=master)](https://travis-ci.org/canjs/can-log)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-log?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-log)
-[![Coverage status](https://coveralls.io/repos/github/canjs/can-log/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-log?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-log.svg)](https://greenkeeper.io/)
 
 An environment agnostic container for global variables. Useful for testing and server-side rendering (SSR), typically used internally by CanJS.
