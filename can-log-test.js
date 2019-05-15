@@ -8,18 +8,18 @@ if(typeof console !== "undefined") {
 	QUnit.module("can-log");
 
 	QUnit.test("log.log works", function(assert) {
-		QUnit.expect(1);
+		assert.expect(1);
 		var log = console.log;
 		console.log = function(msg){
 			assert.equal(msg, "it worked");
-			console.log = QUnit.log;
+			console.log = log;
 		};
 
 		canLog.log("it worked");
 	});
 
 	QUnit.test("log.warn works", function(assert) {
-		QUnit.expect(1);
+		assert.expect(1);
 		var warn = console.warn;
 		console.warn = function(msg){
 			assert.equal(msg, "it worked");
@@ -30,7 +30,7 @@ if(typeof console !== "undefined") {
 	});
 
 	QUnit.test("log.error works", function(assert) {
-		QUnit.expect(1);
+		assert.expect(1);
 		var error = console.error;
 		console.error = function(msg){
 			assert.equal(msg, "an error");
