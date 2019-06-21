@@ -26,7 +26,7 @@
     "develop": "done-serve --static --develop --port 8080",
     "detect-cycle": "detect-cyclic-packages --ignore done-serve"
   },
-  "main": "dist/cjs/can-log",
+  "main": "can-log",
   "keywords": [
     "canjs",
     "donejs-plugin"
